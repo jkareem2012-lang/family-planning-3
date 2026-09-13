@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>حجز موعد | إدارة تنمية الأسرة بدمياط</title>
+
+    <!-- Cairo Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+ 
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Cairo", sans-serif;
+            background: linear-gradient(135deg, #eef7fc, #f9fbfd);
+            color: #173b68;
+            min-height: 100vh;
+        }
+
+        /* =========================
+           Header
+        ========================= */
+
+        header {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+            padding: 15px 6%;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .logo-area h3 {
+            font-size: 16px;
+            color: #173b68;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            text-decoration: none;
+            color: #2477b9;
+
+            font-weight: 700;
+            font-size: 14px;
+
+            padding: 9px 15px;
+            border: 1px solid #d8e7f2;
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #2477b9;
+            color: white;
+        }
+
+        /* =========================
+           Main
+        ========================= */
+
+        main {
+            min-height: calc(100vh - 80px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 55px 20px;
+        }
+
+        .booking-wrapper {
+            width: min(850px, 100%);
+        }
+
+        /* =========================
+           Title
+        ========================= */
+
+        .booking-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .booking-icon {
+            width: 70px;
+            height: 70px;
+
+            margin: 0 auto 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #2477b9;
+            color: white;
+
+            border-radius: 20px;
+
+            font-size: 30px;
+
+            box-shadow: 0 10px 25px rgba(36, 119, 185, 0.22);
+        }
+
+        .booking-title h1 {
+            font-size: 30px;
+            margin-bottom: 7px;
+        }
+
+        .booking-title p {
+            color: #6b7d90;
+            font-size: 15px;
+        }
+
+        /* =========================
+           Booking Card
+        ========================= */
+
+        .booking-card {
+            background: white;
+
+            border-radius: 25px;
+
+            padding: 40px;
+
+            box-shadow:
+                0 15px 45px rgba(22, 66, 100, 0.10);
+
+            border: 1px solid #e7f0f6;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 23px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 700;
+            color: #244b70;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            color: #2477b9;
+            font-size: 16px;
+
+            pointer-events: none;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+
+            height: 52px;
+
+            padding: 0 45px 0 15px;
+
+            border: 1px solid #d9e5ee;
+            border-radius: 13px;
+
+            background: #fbfdff;
+
+            font-family: "Cairo", sans-serif;
+            font-size: 14px;
+
+            color: #173b68;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #2477b9;
+
+            background: white;
+
+            box-shadow:
+                0 0 0 4px rgba(36, 119, 185, 0.08);
+        }
+
+        /* =========================
+           Submit Button
+        ========================= */
+
+        .submit-area {
+            margin-top: 30px;
+        }
+
+        .submit-btn {
+            width: 100%;
+
+            height: 56px;
+
+            border: none;
+            border-radius: 14px;
+
+            background: linear-gradient(
+                135deg,
+                #2477b9,
+                #14558c
+            );
+
+            color: white;
+
+            font-family: "Cairo", sans-serif;
+            font-size: 17px;
+            font-weight: 800;
+
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            box-shadow:
+                0 10px 25px rgba(36, 119, 185, 0.20);
+
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 14px 30px rgba(36, 119, 185, 0.28);
+        }
+
+        /* =========================
+           Message
+        ========================= */
+
+        #bookingMessage {
+            text-align: center;
+
+            margin-top: 20px;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           Mobile
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 12px 18px;
+            }
+
+            .logo-area h3 {
+                font-size: 13px;
+            }
+
+            .logo-area img {
+                width: 42px;
+                height: 42px;
+            }
+
+            main {
+                padding: 40px 15px;
+                align-items: flex-start;
+            }
+
+            .booking-title h1 {
+                font-size: 25px;
+            }
+
+            .booking-card {
+                padding: 25px 18px;
+                border-radius: 20px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .booking-icon {
+                width: 62px;
+                height: 62px;
+                font-size: 26px;
+            }
+
+            .back-btn span {
+                display: none;
+            }
+
+            .back-btn {
+                padding: 10px 12px;
+            }
+        }
+        /* =========================================
+   بطاقة تأكيد الحجز
+========================================= */
+
+.booking-success-card {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    border-top: 5px solid #1976d2;
+    animation: bookingCardShow 0.4s ease;
+}
+
+.booking-success-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #e8f5e9;
+    color: #2e7d32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.booking-success-card h3 {
+    margin: 8px 0;
+    color: #1976d2;
+    font-size: 24px;
+}
+
+.booking-success-card p {
+    color: #666;
+    margin-bottom: 22px;
+}
+
+.booking-details {
+    background: #f7f9fc;
+    border-radius: 15px;
+    padding: 18px;
+    text-align: right;
+}
+
+.booking-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 11px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.booking-detail:last-child {
+    border-bottom: none;
+}
+
+.booking-detail span:first-child {
+    color: #666;
+}
+
+.booking-detail strong {
+    color: #222;
+}
+
+.booking-number-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eef6ff;
+    border-radius: 14px;
+}
+
+.booking-number-title {
+    display: block;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.booking-number {
+    color: #1976d2;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.booking-note {
+    display: block;
+    margin-top: 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@keyframes bookingCardShow {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         Header
+    ========================= -->
+
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo-area">
+
+                <img
+                    src="Flag_of_Damietta_Governorate.svg.webp"
+                    alt="شعار دمياط"
+                >
+
+                <h3>
+                    إدارة تنمية الأسرة بدمياط
+                </h3>
+
+            </div>
+
+
+            <a href="تواصل معنا.html" class="back-btn">
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+                <span>
+                    العودة لتواصل معنا
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         Main
+    ========================= -->
+
+    <main>
+
+        <div class="booking-wrapper">
+
+
+            <!-- Title -->
+
+            <div class="booking-title">
+
+                <div class="booking-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <h1>
+                    احجز موعدك
+                </h1>
+
+                <p>
+                    اختر المركز واليوم والساعة المناسبة لك
+                </p>
+
+            </div>
+
+
+
+            <!-- Booking Card -->
+
+            <div class="booking-card">
+
+                <form id="bookingForm">
+
+
+                    <div class="form-grid">
+
+
+                        <!-- الاسم -->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                الاسم
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="اكتب الاسم"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- الوظيفة -->
+
+                        <div class="form-group">
+
+                            <label for="job">
+                                الوظيفة
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-briefcase"></i>
+
+                                <input
+                                    type="text"
+                                    id="job"
+                                    placeholder="اكتب الوظيفة"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- المركز -->
+
+                        <div class="form-group full">
+
+                            <label for="center">
+                                المركز
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                                <select id="center" required>
+
+                                    <option value="">
+                                        اختر المركز
+                                    </option>
+
+                                    <option value="مركز اسم ااول">
+                                        مركز اسم ااول
+                                    </option>
+
+                                    <option value="مركز صحه فرسكور">
+                                        مركز صحه فرسكور
+                                    </option>
+
+                                    <option value="مركز صحه الزرقا">
+                                        مركز صحه الزرقا
+                                    </option>
+
+                                    <option value="مركز صحه كفرسعد">
+                                        مركز صحه كفرسعد
+                                    </option>
+
+                                    <option value="عيادة مستشفي كفر البطيخ">
+                                        عيادة مستشفي كفر البطيخ
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- اليوم -->
+
+                        <div class="form-group">
+
+                            <label for="date">
+                                اليوم
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-calendar-days"></i>
+
+                       <input id="date" type="date" required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- الساعة -->
+
+                        <div class="form-group">
+
+                            <label for="time">
+                                الساعة
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-clock"></i>
+<input id="time" type="time" min="09:00" max="17:00" required>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Submit -->
+
+                    <div class="submit-area">
+
+                        <button
+                            type="submit"
+                            class="submit-btn"
+                        >
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            تأكيد الحجز
+
+                        </button>
+
+                    </div>
+
+
+                    <div id="bookingMessage"></div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+<script type="module">
+
+import { db } from "./Firebase.js";
+
+import {
+    collection,
+    addDoc,
+    serverTimestamp,
+    query,
+    where,
+    getDocs
+} from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+
+
+// =========================================
+// نموذج الحجز
+// =========================================
+
+const bookingForm =
+    document.getElementById("bookingForm");
+
+const bookingMessage =
+    document.getElementById("bookingMessage");
+
+const centerSelect =
+    document.getElementById("center");
+
+
+// =========================================
+// إرسال الحجز
+// =========================================
+
+bookingForm.addEventListener("submit", async function (e) {
+
+    e.preventDefault();
+
+
+    // =========================================
+    // قراءة البيانات
+    // =========================================
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const job =
+        document.getElementById("job").value.trim();
+
+    const center =
+        centerSelect.value;
+
+    const date =
+        document.getElementById("date").value;
+
+    const time =
+        document.getElementById("time").value;
+
+
+    // =========================================
+    // التأكد من البيانات
+    // =========================================
+
+    if (!name || !job || !center || !date || !time) {
+
+        bookingMessage.innerHTML =
+            "من فضلك أكمل جميع البيانات.";
+
+        bookingMessage.style.color = "red";
+
+        return;
+    }
+
+
+    // =========================================
+    // التأكد من وقت الحجز
+    // من 9 صباحًا إلى 5 مساءً
+    // =========================================
+
+    if (time < "09:00" || time > "17:00") {
+
+        bookingMessage.innerHTML =
+            "وقت الحجز يجب أن يكون من 9:00 صباحًا حتى 5:00 مساءً.";
+
+        bookingMessage.style.color = "red";
+
+        return;
+    }
+
+
+    try {
+
+        // =========================================
+        // الاتصال بمجموعة الحجوزات
+        // =========================================
+
+        const bookingsRef =
+            collection(db, "bookings");
+
+
+        // =========================================
+        // البحث عن حجوزات نفس اليوم
+        // =========================================
+
+        const todayBookingsQuery = query(
+            bookingsRef,
+            where("date", "==", date)
+        );
+
+
+        const snapshot =
+            await getDocs(todayBookingsQuery);
+
+
+        const bookingsCount =
+            snapshot.size;
+
+
+        // =========================================
+        // الحد الأقصى 15 حجز
+        // =========================================
+
+        if (bookingsCount >= 15) {
+
+            bookingMessage.innerHTML = `
+                <div style="
+                    max-width:500px;
+                    margin:20px auto;
+                    padding:20px;
+                    background:#fff5f5;
+                    border-radius:15px;
+                    text-align:center;
+                    color:#c62828;
+                ">
+                    <div style="font-size:30px;">❌</div>
+
+                    <strong style="font-size:18px;">
+                        عذرًا، اكتمل عدد الحجوزات لهذا اليوم
+                    </strong>
+
+                    <br>
+
+                    <span>
+                        برجاء اختيار يوم آخر.
+                    </span>
+                </div>
+            `;
+
+            return;
+        }
+
+
+        // =========================================
+        // إنشاء رقم حجز قصير
+        // مثال: DM-4827
+        // =========================================
+
+        const randomNumber =
+            Math.floor(1000 + Math.random() * 9000);
+
+        const bookingNumber =
+            `DM-${randomNumber}`;
+
+
+        // =========================================
+        // حفظ الحجز في Firebase
+        // =========================================
+
+        await addDoc(
+            bookingsRef,
+            {
+                bookingNumber: bookingNumber,
+
+                name: name,
+
+                job: job,
+
+                center: center,
+
+                date: date,
+
+                time: time,
+
+                createdAt: serverTimestamp()
+            }
+        );
+
+
+        // =========================================
+        // تحويل التاريخ لشكل جميل
+        // =========================================
+
+        const formattedDate =
+            new Date(date + "T00:00:00")
+            .toLocaleDateString("ar-EG", {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            });
+
+
+        // =========================================
+        // تحويل الوقت لشكل جميل
+        // =========================================
+
+        const formattedTime =
+            new Date(`2000-01-01T${time}`)
+            .toLocaleTimeString("ar-EG", {
+                hour: "numeric",
+                minute: "2-digit"
+            });
+
+
+        // =========================================
+        // إظهار بطاقة تأكيد الحجز
+        // =========================================
+
+        bookingMessage.innerHTML = `
+
+            <div class="booking-success-card">
+
+                <div class="booking-success-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    تم تأكيد حجزك بنجاح
+                </h3>
+
+                <p>
+                    تم تسجيل موعدك بنجاح.
+                </p>
+
+
+                <div class="booking-details">
+
+                    <div class="booking-detail">
+                        <span>الاسم</span>
+                        <strong>${name}</strong>
+                    </div>
+
+
+                    <div class="booking-detail">
+                        <span>المركز</span>
+                        <strong>${center}</strong>
+                    </div>
+
+
+                    <div class="booking-detail">
+                        <span>التاريخ</span>
+                        <strong>${formattedDate}</strong>
+                    </div>
+
+
+                    <div class="booking-detail">
+                        <span>الوقت</span>
+                        <strong>${formattedTime}</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-number-box">
+
+                    <span class="booking-number-title">
+                        رقم الحجز
+                    </span>
+
+                    <span class="booking-number">
+                        ${bookingNumber}
+                    </span>
+
+                </div>
+
+
+                <span class="booking-note">
+                    يرجى الاحتفاظ برقم الحجز الخاص بك.
+                </span>
+
+            </div>
+
+        `;
+
+
+        // =========================================
+        // تفريغ النموذج
+        // =========================================
+
+        bookingForm.reset();
+
+
+    } catch (error) {
+
+        console.error("Booking error:", error);
+
+
+        bookingMessage.innerHTML = `
+            <div style="
+                color:#c62828;
+                text-align:center;
+                margin:20px;
+            ">
+                حدث خطأ أثناء الحجز.
+                <br>
+                حاول مرة أخرى.
+            </div>
+        `;
+    }
+
+});
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+</html>

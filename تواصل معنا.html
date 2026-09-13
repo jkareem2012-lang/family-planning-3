@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>تواصل معنا | إدارة تنظيم الأسرة بدمياط</title>
+
+<!-- خط Cairo -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<!-- Font Awesome -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+>
+
+<style>
+
+/* =====================================================
+الإعدادات العامة
+===================================================== */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: "Cairo", sans-serif;
+background: #f7fbfe;
+color: #1e293b;
+line-height: 1.8;
+overflow-x: hidden;
+}
+
+/* =====================================================
+HEADER
+===================================================== */
+
+header {
+position: sticky;
+top: 0;
+z-index: 1000;
+
+background: rgba(255,255,255,.97);
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 15px 7%;
+
+box-shadow: 0 4px 20px rgba(0,0,0,.06);
+
+backdrop-filter: blur(10px);
+}
+
+/* الشعار */
+
+.logo {
+display: flex;
+align-items: center;
+gap: 13px;
+}
+
+.logo img {
+width: 58px;
+height: 58px;
+
+border-radius: 50%;
+
+object-fit: cover;
+}
+
+.logo h2 {
+color: #0284c7;
+font-size: 20px;
+line-height: 1.4;
+}
+
+.logo p {
+color: #7b8b97;
+font-size: 11px;
+}
+
+/* القائمة */
+
+nav {
+display: flex;
+align-items: center;
+gap: 22px;
+}
+
+nav a {
+text-decoration: none;
+color: #40515f;
+
+font-size: 14px;
+font-weight: 700;
+
+transition: .3s;
+
+padding: 8px 5px;
+}
+
+nav a:hover,
+nav a.active {
+color: #0284c7;
+}
+
+/* زر القائمة للموبايل */
+
+.menu {
+display: none;
+
+width: 42px;
+height: 42px;
+
+border-radius: 10px;
+
+background: #e0f2fe;
+color: #0284c7;
+
+align-items: center;
+justify-content: center;
+
+cursor: pointer;
+
+font-size: 20px;
+}
+
+/* =====================================================
+HERO
+===================================================== */
+
+.contact-hero {
+position: relative;
+overflow: hidden;
+
+text-align: center;
+
+padding: 70px 20px 85px;
+
+background:
+linear-gradient(
+135deg,
+#e0f2fe 0%,
+#f0f9ff 55%,
+#ffffff 100%
+);
+
+border-bottom: 1px solid #e3eef5;
+}
+
+/* الدوائر الخفيفة */
+
+.contact-hero::before {
+content: "";
+
+position: absolute;
+
+width: 280px;
+height: 280px;
+
+border-radius: 50%;
+
+background: rgba(2,132,199,.06);
+
+top: -150px;
+left: -80px;
+}
+
+.contact-hero::after {
+content: "";
+
+position: absolute;
+
+width: 230px;
+height: 230px;
+
+border-radius: 50%;
+
+background: rgba(56,189,248,.07);
+
+right: -80px;
+bottom: -120px;
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+
+max-width: 800px;
+
+margin: auto;
+}
+
+.hero-label {
+display: inline-flex;
+
+align-items: center;
+gap: 8px;
+
+background: white;
+
+color: #0284c7;
+
+border: 1px solid #d9edf8;
+
+padding: 7px 17px;
+
+border-radius: 30px;
+
+font-size: 13px;
+font-weight: 700;
+
+box-shadow: 0 5px 15px rgba(0,0,0,.04);
+}
+
+.contact-hero h1 {
+margin-top: 18px;
+
+color: #075b8f;
+
+font-size: 42px;
+font-weight: 800;
+}
+
+.contact-hero p {
+max-width: 650px;
+
+margin: 12px auto 0;
+
+color: #667b89;
+
+font-size: 16px;
+}
+
+/* =====================================================
+معلومات التواصل
+===================================================== */
+
+.contact-container {
+width: 90%;
+max-width: 1150px;
+
+margin: 65px auto;
+}
+
+/* العنوان */
+
+.section-title {
+text-align: center;
+
+margin-bottom: 35px;
+}
+
+.section-title span {
+color: #e08bab;
+
+font-size: 13px;
+font-weight: 700;
+}
+
+.section-title h2 {
+color: #174f78;
+
+font-size: 30px;
+
+margin-top: 3px;
+}
+
+/* الكروت */
+
+.contact-cards {
+display: grid;
+
+grid-template-columns:
+repeat(3, 1fr);
+
+gap: 20px;
+}
+
+.contact-card {
+background: white;
+
+border: 1px solid #e1edf5;
+
+border-radius: 18px;
+
+padding: 28px 20px;
+
+text-align: center;
+
+box-shadow:
+0 7px 25px rgba(30,100,150,.06);
+
+transition: .3s;
+}
+
+.contact-card:hover {
+transform: translateY(-5px);
+
+box-shadow:
+0 12px 30px rgba(30,100,150,.10);
+
+border-color: #b9ddf3;
+}
+
+.contact-icon {
+width: 60px;
+height: 60px;
+
+margin: 0 auto 15px;
+
+border-radius: 50%;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: #eaf6ff;
+
+color: #0284c7;
+
+font-size: 24px;
+}
+
+.contact-card h3 {
+color: #28546e;
+
+font-size: 18px;
+
+margin-bottom: 5px;
+}
+
+.contact-card p {
+color: #738692;
+
+font-size: 13px;
+
+line-height: 1.9;
+}
+
+/* =====================================================
+روابط التواصل
+===================================================== */
+
+.contact-link {
+display: inline-flex;
+
+align-items: center;
+gap: 7px;
+
+margin-top: 8px;
+
+color: #0284c7;
+
+text-decoration: none;
+
+font-weight: 700;
+
+font-size: 14px;
+}
+
+.contact-link:hover {
+color: #0369a1;
+}
+
+/* واتساب */
+
+.whatsapp-card .contact-icon {
+background: #eafaf3;
+color: #15966b;
+}
+
+.whatsapp-card .contact-link {
+color: #15966b;
+}
+
+/* =====================================================
+مراكز الخدمة والخريطة
+===================================================== */
+
+.locations {
+width: 90%;
+max-width: 1150px;
+
+margin: 0 auto 70px;
+}
+
+.locations-box {
+display: grid;
+
+grid-template-columns: 1fr 1.25fr;
+
+gap: 25px;
+
+background: white;
+
+border: 1px solid #e1edf5;
+
+border-radius: 22px;
+
+padding: 25px;
+
+box-shadow:
+0 8px 30px rgba(30,100,150,.06);
+}
+
+/* قائمة المراكز */
+
+.centers h3 {
+color: #17547f;
+
+font-size: 21px;
+
+margin-bottom: 15px;
+}
+
+.center {
+display: flex;
+
+align-items: flex-start;
+
+gap: 13px;
+
+padding: 15px 0;
+
+border-bottom: 1px solid #edf3f7;
+}
+
+.center:last-child {
+border-bottom: none;
+}
+
+.center-icon {
+width: 40px;
+height: 40px;
+
+flex-shrink: 0;
+
+border-radius: 11px;
+
+background: #eaf6ff;
+
+color: #0284c7;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+}
+
+.center h4 {
+color: #31566c;
+
+font-size: 15px;
+
+margin-bottom: 2px;
+}
+
+.center p {
+color: #7b8e9a;
+
+font-size: 12px;
+}
+
+/* =====================================================
+الخريطة
+===================================================== */
+
+.map-container {
+min-height: 400px;
+
+overflow: hidden;
+
+border-radius: 17px;
+
+background: #eaf6ff;
+
+position: relative;
+}
+
+.map-container iframe {
+width: 100%;
+height: 100%;
+
+min-height: 400px;
+
+border: 0;
+}
+
+/* =====================================================
+البحث عن مركز الخدمة
+===================================================== */
+
+.service-search {
+width: 90%;
+max-width: 1000px;
+
+margin: 0 auto 70px;
+}
+
+.service-search-box {
+background: white;
+
+border: 1px solid #e1edf5;
+
+border-radius: 22px;
+
+padding: 30px;
+
+box-shadow:
+0 8px 30px rgba(30,100,150,.06);
+
+text-align: center;
+}
+
+.service-search-title {
+color: #17547f;
+
+font-size: 23px;
+
+margin-bottom: 8px;
+}
+
+.service-search-description {
+color: #738692;
+
+font-size: 13px;
+
+margin-bottom: 22px;
+}
+
+.search-wrapper {
+display: flex;
+
+gap: 10px;
+
+max-width: 700px;
+
+margin: auto;
+}
+
+.search-wrapper input {
+flex: 1;
+
+height: 52px;
+
+border: 1px solid #cfe3ef;
+
+border-radius: 13px;
+
+padding: 0 18px;
+
+font-family: "Cairo", sans-serif;
+
+font-size: 14px;
+
+color: #1e293b;
+
+outline: none;
+
+transition: .3s;
+}
+
+.search-wrapper input:focus {
+border-color: #0284c7;
+
+box-shadow: 0 0 0 3px rgba(2,132,199,.08);
+}
+
+.search-btn {
+height: 52px;
+
+padding: 0 25px;
+
+border: none;
+
+border-radius: 13px;
+
+background: #0284c7;
+
+color: white;
+
+font-family: "Cairo", sans-serif;
+
+font-size: 14px;
+
+font-weight: 700;
+
+cursor: pointer;
+
+transition: .3s;
+
+white-space: nowrap;
+}
+
+.search-btn:hover {
+background: #0369a1;
+
+transform: translateY(-2px);
+}
+
+/* نتيجة البحث */
+
+.search-result {
+display: none;
+
+margin-top: 25px;
+
+text-align: right;
+}
+
+.search-result.show {
+display: block;
+}
+
+.result-card {
+background: #f7fbfe;
+
+border: 1px solid #d9edf8;
+
+border-radius: 17px;
+
+padding: 22px;
+}
+
+.result-label {
+display: block;
+
+color: #0284c7;
+
+font-size: 12px;
+
+font-weight: 700;
+
+margin-bottom: 5px;
+}
+
+.result-card h3 {
+color: #174f78;
+
+font-size: 21px;
+
+margin-bottom: 5px;
+}
+
+.result-address {
+color: #667b89;
+
+font-size: 13px;
+
+margin-bottom: 18px;
+}
+
+.result-buttons {
+display: flex;
+
+gap: 10px;
+
+flex-wrap: wrap;
+}
+
+.result-btn {
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 7px;
+
+padding: 10px 18px;
+
+border-radius: 10px;
+
+text-decoration: none;
+
+font-family: "Cairo", sans-serif;
+
+font-size: 13px;
+
+font-weight: 700;
+
+transition: .3s;
+}
+
+.map-btn {
+background: #eaf6ff;
+
+color: #0284c7;
+
+border: 1px solid #cfe8f7;
+}
+
+.map-btn:hover {
+background: #dff2fc;
+}
+
+.booking-btn {
+background: #15966b;
+
+color: white;
+}
+
+.booking-btn:hover {
+background: #117b59;
+}
+
+/* حالة عدم وجود نتيجة */
+
+.no-result {
+background: #fff7f9;
+
+border: 1px solid #f3d6df;
+
+border-radius: 13px;
+
+padding: 15px;
+
+color: #b04a6a;
+
+font-size: 13px;
+
+text-align: center;
+}
+
+/* تعدد النتائج */
+
+.multiple-results {
+display: grid;
+
+gap: 12px;
+}
+
+.multiple-title {
+color: #31566c;
+
+font-size: 14px;
+
+font-weight: 700;
+
+margin-bottom: 10px;
+}
+
+/* =====================================================
+واتساب والاستشارة
+===================================================== */
+
+.consultation {
+width: 90%;
+max-width: 1100px;
+
+margin: 0 auto 70px;
+
+padding: 35px 40px;
+
+border-radius: 22px;
+
+background:
+linear-gradient(
+135deg,
+#eaf7ff,
+#f8fcff
+);
+
+border: 1px solid #d8edf9;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 30px;
+}
+
+.consultation-text span {
+color: #0284c7;
+
+font-size: 13px;
+
+font-weight: 700;
+}
+
+.consultation-text h2 {
+color: #17547f;
+
+font-size: 23px;
+
+margin: 3px 0;
+}
+
+.consultation-text p {
+color: #70828f;
+
+font-size: 13px;
+}
+
+.whatsapp-btn {
+flex-shrink: 0;
+
+display: inline-flex;
+
+align-items: center;
+
+gap: 9px;
+
+padding: 13px 25px;
+
+border-radius: 30px;
+
+background: #15966b;
+
+color: white;
+
+text-decoration: none;
+
+font-weight: 700;
+
+transition: .3s;
+}
+
+.whatsapp-btn:hover {
+background: #117b59;
+
+transform: translateY(-2px);
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+footer {
+background: #103f61;
+
+color: white;
+
+text-align: center;
+
+padding: 30px 20px;
+
+font-size: 13px;
+}
+
+footer p {
+color: #c9dce9;
+}
+
+/* =====================================================
+RESPONSIVE
+===================================================== */
+
+@media (max-width: 950px) {
+
+nav {
+gap: 10px;
+}
+
+nav a {
+font-size: 12px;
+}
+
+.contact-cards {
+grid-template-columns:
+repeat(2, 1fr);
+}
+
+.locations-box {
+grid-template-columns: 1fr;
+}
+
+}
+
+@media (max-width: 768px) {
+
+header {
+padding: 12px 5%;
+}
+
+.logo img {
+width: 50px;
+height: 50px;
+}
+
+.logo h2 {
+font-size: 16px;
+}
+
+.logo p {
+display: none;
+}
+
+.menu {
+display: flex;
+}
+
+nav {
+position: fixed;
+
+top: 74px;
+right: -100%;
+
+width: 270px;
+
+height: calc(100vh - 74px);
+
+background: white;
+
+padding: 20px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: stretch;
+
+gap: 5px;
+
+box-shadow:
+-5px 0 20px rgba(0,0,0,.08);
+
+transition: .35s;
+}
+
+nav.active {
+right: 0;
+}
+
+nav a {
+padding: 13px 15px;
+
+border-radius: 10px;
+
+font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+background: #eaf6ff;
+}
+
+.contact-hero {
+padding: 55px 20px 70px;
+}
+
+.contact-hero h1 {
+font-size: 31px;
+}
+
+.contact-hero p {
+font-size: 14px;
+}
+
+.contact-cards {
+grid-template-columns: 1fr;
+}
+
+.locations-box {
+padding: 15px;
+}
+
+.map-container,
+.map-container iframe {
+min-height: 320px;
+}
+
+.consultation {
+flex-direction: column;
+
+text-align: center;
+
+padding: 30px 20px;
+}
+
+/* البحث في الموبايل */
+
+.search-wrapper {
+flex-direction: column;
+}
+
+.search-btn {
+width: 100%;
+}
+
+.result-buttons {
+flex-direction: column;
+}
+
+.result-btn {
+width: 100%;
+}
+
+}
+
+@media (max-width: 450px) {
+
+.logo h2 {
+font-size: 14px;
+}
+
+.contact-hero h1 {
+font-size: 27px;
+}
+
+.section-title h2 {
+font-size: 25px;
+}
+
+.contact-card {
+padding: 24px 17px;
+}
+
+.service-search-box {
+padding: 22px 15px;
+}
+
+}
+
+/* =====================================================
+Booking Section
+===================================================== */
+
+.booking-service {
+display: flex;
+justify-content: center;
+margin: 45px auto;
+padding: 0 20px;
+}
+
+.booking-service-btn {
+width: min(500px, 100%);
+min-height: 130px;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 6px;
+
+background:
+linear-gradient(
+135deg,
+#2477b9,
+#14558c
+);
+
+color: #fff;
+
+text-decoration: none;
+
+border-radius: 22px;
+
+box-shadow:
+0 12px 30px rgba(36, 119, 185, 0.25);
+
+font-family: "Cairo", sans-serif;
+
+transition: 0.3s ease;
+}
+
+.booking-service-btn i {
+font-size: 32px;
+
+margin-bottom: 4px;
+}
+
+.booking-service-btn span {
+font-size: 23px;
+
+font-weight: 800;
+}
+
+.booking-service-btn small {
+font-size: 14px;
+
+opacity: 0.9;
+}
+
+.booking-service-btn:hover {
+transform: translateY(-5px);
+
+box-shadow:
+0 18px 35px rgba(36, 119, 185, 0.3);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+HEADER
+===================================================== -->
+
+<header>
+
+<div class="logo">
+
+<img
+src="Flag_of_Damietta_Governorate.svg.webp"
+alt="علم دمياط"
+>
+
+<div>
+
+<h2>
+إدارة تنظيم الأسرة بدمياط
+</h2>
+
+<p>
+Damietta Family Planning Administration
+</p>
+
+</div>
+
+</div>
+
+<nav id="nav-links">
+
+<a href="index.html">
+الرئيسية
+</a>
+
+<a href="وسائل .html">
+وسائل تنظيم الأسرة
+</a>
+
+<a href="الاسئله الشائعه.html">
+الأسئلة الشائعة
+</a>
+
+<a href="تواصل معنا.html" class="active">
+تواصل معنا
+</a>
+
+</nav>
+
+<div class="menu" id="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</header>
+
+<!-- =====================================================
+HERO
+===================================================== -->
+
+<section class="contact-hero">
+
+<div class="hero-content">
+
+<span class="hero-label">
+
+<i class="fa-solid fa-headset"></i>
+
+نحن هنا لمساعدتك
+
+</span>
+
+<h1>
+تواصل معنا
+</h1>
+
+<p>
+يمكنك التواصل مع إدارة تنظيم الأسرة بدمياط
+للحصول على المعلومات والاستفسارات الخاصة بخدمات
+تنظيم الأسرة ومراكز تقديم الخدمة.
+</p>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+CONTACT CARDS
+===================================================== -->
+
+<section class="contact-container">
+
+<div class="section-title">
+
+<span>
+قنوات التواصل
+</span>
+
+<h2>
+كيف يمكنك التواصل معنا؟
+</h2>
+
+</div>
+
+<div class="contact-cards">
+
+<!-- الهاتف -->
+
+<article class="contact-card">
+
+<div class="contact-icon">
+
+<i class="fa-solid fa-phone"></i>
+
+</div>
+
+<h3>
+الهاتف
+</h3>
+
+<p>
+للاستفسار عن خدمات تنظيم الأسرة
+ومواعيد تقديم الخدمة.
+</p>
+
+<a
+href="tel:+201098999498"
+class="contact-link"
+>
+
+<i class="fa-solid fa-phone"></i>
+
+20 10 98999498
+
+</a>
+
+</article>
+
+
+<!-- واتساب -->
+
+<article class="contact-card whatsapp-card">
+
+<div class="contact-icon">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</div>
+
+<h3>
+واتساب
+</h3>
+
+<p>
+يمكنك إرسال استفسارك والتواصل
+مع جهة تقديم الخدمة.
+</p>
+
+<a
+href="https://wa.me/201098999498"
+target="_blank"
+rel="noopener"
+class="contact-link"
+>
+
+<i class="fa-brands fa-whatsapp"></i>
+
+تواصل عبر واتساب
+
+</a>
+
+</article>
+
+
+<!-- الموقع -->
+
+<article class="contact-card">
+
+<div class="contact-icon">
+
+<i class="fa-solid fa-location-dot"></i>
+
+</div>
+
+<h3>
+الموقع
+</h3>
+
+<p>
+محافظة دمياط – جمهورية مصر العربية
+</p>
+
+<a
+href="#locations"
+class="contact-link"
+>
+
+<i class="fa-solid fa-map-location-dot"></i>
+
+عرض المراكز
+
+</a>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+CENTERS + MAP
+===================================================== -->
+
+<section class="locations" id="locations">
+
+<div class="section-title">
+
+<span>
+أماكن تقديم الخدمة
+</span>
+
+<h2>
+مراكز تنظيم الأسرة
+</h2>
+
+</div>
+
+<div class="locations-box">
+
+<!-- المراكز -->
+
+<div class="centers">
+
+<h3>
+مراكز الخدمة
+</h3>
+
+<div class="center">
+
+<div class="center-icon">
+
+<i class="fa-solid fa-hospital"></i>
+
+</div>
+
+<div>
+
+<h4>
+مركز اسم ااول
+</h4>
+
+<p>
+الشرباصي
+</p>
+
+</div>
+
+</div>
+
+
+<div class="center">
+
+<div class="center-icon">
+
+<i class="fa-solid fa-hospital"></i>
+
+</div>
+
+<div>
+
+<h4>
+مركز صحه فرسكور
+</h4>
+
+<p>
+فارسكور
+</p>
+
+</div>
+
+</div>
+
+
+<div class="center">
+
+<div class="center-icon">
+
+<i class="fa-solid fa-hospital"></i>
+
+</div>
+
+<div>
+
+<h4>
+مركز صحه الزرقا
+</h4>
+
+<p>
+الزرقا
+</p>
+
+</div>
+
+</div>
+
+
+<div class="center">
+
+<div class="center-icon">
+
+<i class="fa-solid fa-hospital"></i>
+
+</div>
+
+<div>
+
+<h4>
+مركز صحه كفرسعد
+</h4>
+
+<p>
+كفر سعد
+</p>
+
+</div>
+
+</div>
+
+
+<div class="center">
+
+<div class="center-icon">
+
+<i class="fa-solid fa-hospital"></i>
+
+</div>
+
+<div>
+
+<h4>
+عيادة مستشفي كفر البطيخ
+</h4>
+
+<p>
+كفر البطيخ
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- الخريطة -->
+
+<div class="map-container">
+
+<iframe
+src="https://www.google.com/maps?q=Damietta,Egypt&output=embed"
+loading="lazy"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+البحث عن مركز الخدمة
+===================================================== -->
+
+<section class="service-search">
+
+<div class="section-title">
+
+<span>
+خدمة إلكترونية
+</span>
+
+<h2>
+اعرف مركز الخدمة المناسب لك
+</h2>
+
+</div>
+
+<div class="service-search-box">
+
+<h3 class="service-search-title">
+أين تقع قريتك أو منطقتك؟
+</h3>
+
+<p class="service-search-description">
+اكتب اسم القرية أو المنطقة لمعرفة مركز الخدمة المقترح لك.
+</p>
+
+<div class="search-wrapper">
+
+<input
+type="text"
+id="areaSearch"
+placeholder="مثال: شرباص، السنانية، سيف الدين..."
+autocomplete="off"
+>
+
+<button
+type="button"
+class="search-btn"
+id="searchAreaBtn"
+>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+بحث
+
+</button>
+
+</div>
+
+<div
+class="search-result"
+id="searchResult">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+حجز موعد
+===================================================== -->
+
+<div class="booking-service">
+
+<a
+    href="حجز موعد.html?center=${encodeURIComponent(match.center)}"
+    class="result-btn booking-btn"
+>
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<span>
+احجز موعد
+</span>
+
+<small>
+اختر المركز والموعد بسهولة
+</small>
+
+</a>
+
+</div>
+
+
+<!-- =====================================================
+FOOTER
+===================================================== -->
+
+<footer>
+
+<p>
+جميع الحقوق محفوظة © 2026 |
+إدارة تنظيم الأسرة بدمياط
+</p>
+
+</footer>
+
+
+<!-- =====================================================
+JAVASCRIPT
+===================================================== -->
+
+<script>
+/* =====================================================
+القائمة في الموبايل
+===================================================== */
+
+const menuBtn =
+document.getElementById("menu-btn");
+
+const nav =
+document.getElementById("nav-links");
+
+menuBtn.addEventListener("click", function () {
+
+    nav.classList.toggle("active");
+
+    const icon =
+    menuBtn.querySelector("i");
+
+    if (nav.classList.contains("active")) {
+
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+
+    } else {
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+    }
+
+});
+
+
+/* إغلاق القائمة عند الضغط على رابط */
+
+nav.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        nav.classList.remove("active");
+
+        const icon =
+        menuBtn.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+    });
+
+});
+
+
+/* =====================================================
+بيانات المناطق ومراكز الخدمة
+===================================================== */
+
+const serviceAreas = [
+
+    /* دمياط */
+
+    {
+        center: "مركز خدمة مدينة دمياط",
+        address: "مدينة دمياط",
+        areas: [
+            "الخياطة",
+            "الجواهرة",
+            "شط جريبة",
+            "عزبة اللحم",
+            "الشعراء",
+            "العنانية",
+            "السنانية",
+            "عزب النهضة",
+            "أولاد حمام",
+            "الخليفة",
+            "غيط النصارى",
+            "شطا",
+            "الشيخ ضرغام",
+            "البصارطة",
+            "البستان",
+            "العدلية",
+            "شط محب",
+            "السيالة"
+        ]
+    },
+
+
+    /* فارسكور */
+
+    {
+        center: "مركز طب أسرة فارسكور",
+        address: "مدينة فارسكور",
+        areas: [
+            "شرباص",
+            "الرحامنة",
+            "أبو جريدة",
+            "العزازمة",
+            "العبيدية",
+            "الطرحة",
+            "البراشية",
+            "الغوابين",
+            "كفر الغوابين",
+            "الغنيمية",
+            "الضهرة",
+            "السالمية",
+            "النجارين",
+            "كفر العرب",
+            "كفر الشناوي",
+            "الناصرية",
+            "كرم ورزوق",
+            "الأربعين",
+            "الحوراني",
+            "العطوي",
+            "حجاجة",
+            "أولاد خلف",
+            "ميت الشيوخ"
+        ]
+    },
+
+
+    /* كفر سعد */
+
+    {
+        center: "مركز طب أسرة كفر سعد الرئيسي",
+        address: "مدينة كفر سعد",
+        areas: [
+            "كفر سعد البلد",
+            "النواصرية",
+            "كفر الغاب",
+            "الدهايمة",
+            "البدراوي",
+            "تفتيش ثان",
+            "المحمدية",
+            "الإبراهيمية البحرية",
+            "الإبراهيمية القبلية",
+            "أم الرزق",
+            "كفر سليمان البحري",
+            "السوالم",
+            "كفر ميت أبو غالب",
+            "الزهراء",
+            "كفر الوسطاني",
+            "كفر سعد الإبراهيمية",
+            "ميت أبو غالب البلد",
+            "أبو راشد",
+            "أبو عباد",
+            "السعيدية البحرية",
+            "السعيدية القبلية",
+            "الرياض",
+            "دار السلام",
+            "كفر المنازلة",
+            "كفر المرابعين الشرقية",
+            "اللضامين",
+            "التوفيقية",
+            "العباسية"
+        ]
+    },
+
+
+    /* الزرقا */
+
+    {
+        center: "مركز طب أسرة سيف الدين",
+        address: "مدينة الزرقا",
+        areas: [
+            "ميت الخولي عبد الله",
+            "شرمساح",
+            "كفر المياسرة",
+            "كفر الباز",
+            "سيف الدين",
+            "كفر تقي",
+            "دقهلة",
+            "الزعاترة",
+            "كفر جودة",
+            "كفر الحاجة",
+            "كفر أصيل"
+        ]
+    },
+
+
+    /* كفر البطيخ */
+
+    {
+        center: "وحدة طب أسرة الركابية",
+        address: "مدينة كفر البطيخ",
+        areas: [
+            "أم الرضا",
+            "الركابية",
+            "كفر يوسف",
+            "جمصة البلد",
+            "الرياض",
+            "البساتين"
+        ]
+    }
+
+];
+
+
+/* =====================================================
+توحيد طريقة البحث
+===================================================== */
+
+function normalizeText(text) {
+
+    return text
+        .trim()
+        .toLowerCase()
+        .replace(/[أإآ]/g, "ا")
+        .replace(/ة/g, "ه")
+        .replace(/ى/g, "ي")
+        .replace(/ؤ/g, "و")
+        .replace(/ئ/g, "ي")
+        .replace(/\s+/g, " ");
+
+}
+
+
+/* =====================================================
+عناصر البحث
+===================================================== */
+
+const areaSearch =
+document.getElementById("areaSearch");
+
+const searchAreaBtn =
+document.getElementById("searchAreaBtn");
+
+const searchResult =
+document.getElementById("searchResult");
+
+
+/* =====================================================
+تنفيذ البحث
+===================================================== */
+
+function searchForArea() {
+
+    const searchValue =
+    normalizeText(areaSearch.value);
+
+    searchResult.innerHTML = "";
+
+
+    if (!searchValue) {
+
+        searchResult.innerHTML = `
+
+            <div class="no-result">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                من فضلك اكتب اسم القرية أو المنطقة أولاً.
+
+            </div>
+
+        `;
+
+        searchResult.classList.add("show");
+
+        return;
+
+    }
+
+
+    /* البحث */
+
+    const matches = [];
+
+    serviceAreas.forEach(service => {
+
+        service.areas.forEach(area => {
+
+            if (
+                normalizeText(area) === searchValue ||
+                normalizeText(area).includes(searchValue) ||
+                searchValue.includes(normalizeText(area))
+            ) {
+
+                matches.push({
+
+                    center: service.center,
+                    address: service.address,
+                    area: area
+
+                });
+
+            }
+
+        });
+
+    });
+
+
+    /* لا توجد نتيجة */
+
+    if (matches.length === 0) {
+
+        searchResult.innerHTML = `
+
+            <div class="no-result">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                لم نتمكن من العثور على هذه المنطقة.
+
+                <br>
+
+                تأكد من كتابة اسم القرية بشكل صحيح.
+
+            </div>
+
+        `;
+
+        searchResult.classList.add("show");
+
+        return;
+
+    }
+
+
+    /* منع التكرار */
+
+    const uniqueMatches = [];
+
+    matches.forEach(match => {
+
+        const exists = uniqueMatches.some(item =>
+            item.center === match.center &&
+            item.area === match.area
+        );
+
+        if (!exists) {
+
+            uniqueMatches.push(match);
+
+        }
+
+    });
+
+
+    /* =====================================================
+    لو يوجد أكثر من مركز
+    ===================================================== */
+
+    if (uniqueMatches.length > 1) {
+
+        let cards = "";
+
+        uniqueMatches.forEach(match => {
+
+            const mapQuery =
+            encodeURIComponent(
+                match.center + " " + match.address
+            );
+
+
+            cards += `
+
+                <div class="result-card">
+
+                    <span class="result-label">
+
+                        مركز الخدمة المقترح للمنطقة
+
+                    </span>
+
+
+                    <h3>
+
+                        ${match.center}
+
+                    </h3>
+
+
+                    <p class="result-address">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        المنطقة: ${match.area}
+
+                        <br>
+
+                        <i class="fa-solid fa-map-pin"></i>
+
+                        المكان: ${match.address}
+
+                    </p>
+
+
+                    <div class="result-buttons">
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=${mapQuery}"
+                            target="_blank"
+                            rel="noopener"
+                            class="result-btn map-btn"
+                        >
+
+                            <i class="fa-solid fa-map-location-dot"></i>
+
+                            عرض على الخريطة
+
+                        </a>
+
+
+                        <a
+                            href="حجز موعد.html?center=${encodeURIComponent(match.center)}"
+                            class="result-btn booking-btn"
+                        >
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            احجز موعد
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        });
+
+
+        searchResult.innerHTML = `
+
+            <div class="multiple-title">
+
+                وجدنا أكثر من مركز مرتبط بهذه المنطقة، اختر المركز المناسب:
+
+            </div>
+
+            <div class="multiple-results">
+
+                ${cards}
+
+            </div>
+
+        `;
+
+        searchResult.classList.add("show");
+
+        return;
+
+    }
+
+
+    /* =====================================================
+    نتيجة واحدة
+    ===================================================== */
+
+    const match =
+    uniqueMatches[0];
+
+
+    const mapQuery =
+    encodeURIComponent(
+        match.center + " " + match.address
+    );
+
+
+    searchResult.innerHTML = `
+
+        <div class="result-card">
+
+            <span class="result-label">
+
+                مركز الخدمة المقترح لك
+
+            </span>
+
+
+            <h3>
+
+                ${match.center}
+
+            </h3>
+
+
+            <p class="result-address">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                المنطقة التي تم البحث عنها:
+
+                ${match.area}
+
+                <br>
+
+                <i class="fa-solid fa-map-pin"></i>
+
+                عنوان / مكان المركز:
+
+                ${match.address}
+
+            </p>
+
+
+            <div class="result-buttons">
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=${mapQuery}"
+                    target="_blank"
+                    rel="noopener"
+                    class="result-btn map-btn"
+                >
+
+                    <i class="fa-solid fa-map-location-dot"></i>
+
+                    عرض المركز على الخريطة
+
+                </a>
+
+
+                <a
+                    href="حجز موعد.html?center=${encodeURIComponent(match.center)}"
+                    class="result-btn booking-btn"
+                >
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    احجز موعد
+
+                </a>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    searchResult.classList.add("show");
+
+}
+
+
+/* =====================================================
+زر البحث
+===================================================== */
+
+searchAreaBtn.addEventListener(
+    "click",
+    searchForArea
+);
+
+
+/* =====================================================
+البحث بالضغط على Enter
+===================================================== */
+
+areaSearch.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Enter") {
+
+            searchForArea();
+
+        }
+
+    }
+);
+
+</script>
+
+
+<script type="module" src="Firebase.js"></script>ر
+
+</script>
+
+
+<script type="module" src="Firebase.js"></script>
+
+</body>
+</html>

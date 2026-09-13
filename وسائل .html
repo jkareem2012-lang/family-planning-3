@@ -1,0 +1,1648 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>وسائل تنظيم الأسرة | إدارة تنظيم الأسرة بدمياط</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           الإعدادات العامة
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #0284c7;
+            --secondary: #EAF5FF;
+            --accent: #0284c7;
+            --white: #ffffff;
+            --text: #164E75;
+            --gray: #6C757D;
+            --bg: #F6FAFF;
+
+            --shadow: 0 10px 30px rgba(0, 94, 153, 0.10);
+            --radius: 18px;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            transition: .3s;
+        }
+
+
+        /* =========================
+           Header
+        ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: #fff;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 7%;
+
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo h2 {
+            color: #000;
+            font-size: 22px;
+        }
+
+        .logo p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--accent);
+        }
+
+        .menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--accent);
+        }
+
+
+        /* =========================
+           Dark Mode Button
+        ========================= */
+
+        .theme-btn {
+            background: var(--secondary);
+            color: var(--accent);
+
+            border: none;
+
+            width: 42px;
+            height: 42px;
+
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 18px;
+
+            transition: .3s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* =========================
+           Hero
+        ========================= */
+
+        .hero {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            align-items: center;
+
+            gap: 50px;
+
+            padding: 70px 7%;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            line-height: 2;
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 17px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            background: var(--accent);
+            color: white;
+
+            padding: 14px 35px;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            transition: .3s;
+
+            font-weight: bold;
+
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #0056d2;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           Search
+        ========================= */
+
+        .search-box {
+            width: 90%;
+            max-width: 700px;
+
+            margin: 0 auto 50px;
+
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+
+            padding: 18px 55px 18px 20px;
+
+            border: none;
+
+            border-radius: 50px;
+
+            box-shadow: var(--shadow);
+
+            outline: none;
+
+            font-size: 16px;
+
+            background: #fff;
+            color: #333;
+        }
+
+        .search-box i {
+            position: absolute;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            right: 22px;
+
+            color: #888;
+        }
+
+
+        /* =========================
+           Section Title
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            margin: 50px 0 40px;
+
+            font-size: 35px;
+
+            color: var(--accent);
+        }
+
+
+        /* =========================
+           Cards
+        ========================= */
+
+        .cards {
+            width: 90%;
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 28px;
+        }
+
+        .card {
+            background: white;
+
+            border-radius: var(--radius);
+
+            overflow: hidden;
+
+            box-shadow: var(--shadow);
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease;
+
+            display: flex;
+
+            flex-direction: column;
+
+            min-height: 390px;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 35px rgba(0, 94, 153, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .card h3 {
+            padding: 20px 20px 10px;
+
+            color: var(--accent);
+
+            font-size: 20px;
+        }
+
+        .card button {
+            margin: auto 20px 20px;
+
+            padding: 12px 20px;
+
+            border: none;
+
+            border-radius: 40px;
+
+            background: var(--accent);
+
+            color: white;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+            font-weight: bold;
+
+            font-size: 15px;
+        }
+
+        .card button:hover {
+            background: #0056d2;
+        }
+
+
+        /* =========================
+           No Results
+        ========================= */
+
+        #no-results {
+            display: none;
+
+            text-align: center;
+
+            margin: 40px auto;
+
+            color: #777;
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           Modal
+        ========================= */
+
+        .modal {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, .68);
+
+            justify-content: center;
+            align-items: center;
+
+            z-index: 9999;
+
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #fff;
+
+            width: 95%;
+            max-width: 750px;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            border-radius: 22px;
+
+            padding: 30px;
+
+            position: relative;
+
+            animation: zoom .3s ease;
+
+            box-shadow: 0 15px 50px rgba(0, 0, 0, .25);
+        }
+
+        @keyframes zoom {
+            from {
+                opacity: 0;
+                transform: scale(.85);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .close {
+            position: absolute;
+
+            top: 10px;
+            left: 18px;
+
+            font-size: 35px;
+
+            cursor: pointer;
+
+            color: #777;
+
+            z-index: 2;
+        }
+
+        .close:hover {
+            color: #e11d48;
+        }
+
+        #modal-img {
+            width: 100%;
+
+            max-height: 400px;
+
+            object-fit: contain;
+
+            background: #f8fafc;
+
+            border-radius: 15px;
+
+            margin-bottom: 20px;
+        }
+
+        #modal-title {
+            color: var(--accent);
+
+            margin-bottom: 15px;
+
+            font-size: 30px;
+        }
+
+        #modal-text {
+            line-height: 2;
+
+            color: #555;
+
+            margin-bottom: 20px;
+        }
+
+        #modal-list {
+            padding-right: 22px;
+
+            line-height: 2;
+
+            color: #444;
+
+            margin-bottom: 25px;
+        }
+
+        #modal-list li {
+            margin-bottom: 9px;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+
+
+        /* =========================
+           Footer
+        ========================= */
+
+        footer {
+            margin-top: 80px;
+
+            background:
+                linear-gradient(135deg, #0D6EFD, #5CA9FF);
+
+            color: white;
+
+            padding: 50px 7% 20px;
+
+            text-align: center;
+        }
+
+        footer h3 {
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        footer div a {
+            display: inline-flex;
+
+            justify-content: center;
+            align-items: center;
+
+            width: 45px;
+            height: 45px;
+
+            background: white;
+
+            color: #0D6EFD;
+
+            border-radius: 50%;
+
+            margin: 0 6px 20px;
+
+            text-decoration: none;
+
+            font-size: 20px;
+
+            transition: .3s;
+        }
+
+        footer div a:hover {
+            transform: translateY(-5px);
+        }
+
+
+        /* =========================
+           Dark Mode
+        ========================= */
+
+        :root.dark-theme {
+            --secondary: #1e293b;
+            --accent: #60a5fa;
+            --text: #f8fafc;
+            --gray: #94a3b8;
+            --bg: #0f172a;
+
+            --shadow:
+                0 10px 30px rgba(0, 0, 0, .3);
+        }
+
+        body.dark-theme {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        body.dark-theme header,
+        body.dark-theme nav,
+        body.dark-theme .card,
+        body.dark-theme .modal-content,
+        body.dark-theme .search-box input {
+            background: #1e293b;
+            color: #f8fafc;
+        }
+
+        body.dark-theme nav a {
+            color: #cbd5e1;
+        }
+
+        body.dark-theme nav a:hover,
+        body.dark-theme nav a.active {
+            color: #60a5fa;
+        }
+
+        body.dark-theme .logo h2 {
+            color: white;
+        }
+
+        body.dark-theme .logo p {
+            color: #94a3b8;
+        }
+
+        body.dark-theme .hero-text p,
+        body.dark-theme #modal-text {
+            color: #cbd5e1;
+        }
+
+        body.dark-theme #modal-list {
+            color: #cbd5e1;
+        }
+
+        body.dark-theme .card img {
+            background: #0f172a;
+        }
+
+        body.dark-theme .search-box input::placeholder {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           Mobile
+        ========================= */
+
+        @media (max-width: 992px) {
+
+            header {
+                padding: 14px 4%;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            header {
+                position: sticky;
+                padding: 12px 18px;
+            }
+
+            .logo {
+                gap: 10px;
+            }
+
+            .logo img {
+                width: 48px;
+                height: 48px;
+            }
+
+            .logo h2 {
+                font-size: 17px;
+            }
+
+            .logo p {
+                display: none;
+            }
+
+            nav {
+                display: none;
+
+                position: absolute;
+
+                top: 100%;
+                right: 0;
+
+                width: 100%;
+
+                background: white;
+
+                flex-direction: column;
+
+                padding: 20px;
+
+                box-shadow:
+                    0 10px 20px rgba(0, 0, 0, .1);
+
+                gap: 18px;
+
+                text-align: center;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .theme-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
+
+            .hero {
+                padding: 50px 20px 35px;
+
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+            }
+
+            .section-title {
+                font-size: 28px;
+
+                margin-top: 40px;
+            }
+
+            .cards {
+                width: 92%;
+
+                grid-template-columns: 1fr;
+
+                gap: 22px;
+            }
+
+            .card {
+                min-height: auto;
+            }
+
+            .card img {
+                height: 230px;
+            }
+
+            .card h3 {
+                font-size: 19px;
+            }
+
+            .modal {
+                padding: 12px;
+            }
+
+            .modal-content {
+                padding: 22px 17px;
+
+                max-height: 92vh;
+            }
+
+            #modal-img {
+                max-height: 280px;
+            }
+
+            #modal-title {
+                font-size: 24px;
+
+                padding-left: 30px;
+            }
+
+            #modal-text,
+            #modal-list {
+                font-size: 14px;
+            }
+
+            .whatsapp-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            footer {
+                padding: 40px 20px 20px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .logo h2 {
+                font-size: 15px;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .hero-text p {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 12px 23px;
+            }
+
+            .search-box {
+                width: 92%;
+            }
+
+            .search-box input {
+                font-size: 14px;
+
+                padding:
+                    15px 45px 15px 18px;
+            }
+
+            .card img {
+                height: 210px;
+            }
+
+            #modal-img {
+                max-height: 230px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         Header
+    ========================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="Flag_of_Damietta_Governorate.svg.webp"
+                 alt="شعار دمياط">
+
+            <div>
+
+                <h2>إدارة تنظيم الأسرة بدمياط</h2>
+
+                <p>
+                    Damietta Family Planning Administration
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav id="nav-links">
+
+          <a href="index.html">الرئيسية</a>
+            <a class="active" href="وسائل .html">وسائل تنظيم الأسرة</a>
+         
+            <a href="الاسئله الشائعه.html">الأسئلة الشائعة</a>
+            <a href="تواصل معنا.html">تواصل معنا</a>
+
+        </nav>
+
+
+        <button id="theme-toggle"
+                class="theme-btn"
+                aria-label="تبديل الوضع">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+
+        <div class="menu" id="menu-btn">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         Hero
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                وسائل تنظيم الأسرة
+            </h1>
+
+            <p>
+                تعرف على جميع وسائل تنظيم الأسرة المعتمدة،
+                واكتشف مميزات كل وسيلة وكيفية استخدامها
+                بعد استشارة الطبيب المختص.
+            </p>
+
+            <a href="#methods" class="btn">
+                استكشف الوسائل
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         Search
+    ========================= -->
+
+    <section class="search-box">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="ابحث عن وسيلة..."
+        >
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+    </section>
+
+
+
+    <!-- =========================
+         Methods
+    ========================= -->
+
+    <section class="methods" id="methods">
+
+        <h2 class="section-title">
+            وسائل تنظيم الأسرة
+        </h2>
+
+
+        <div class="cards">
+
+
+            <!-- اللولب النحاسي -->
+
+            <div class="card">
+
+                <img src="اللولب.jpeg"
+                     alt="اللولب النحاسي">
+
+                <h3>
+                    اللولب النحاسي
+                </h3>
+
+                <button onclick="openModal('iud')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+
+
+            <!-- اللولب الشجري -->
+
+            <div class="card">
+
+                <img src="مالتي لود.jpeg"
+                     alt="اللولب الشجري مالتي لود">
+
+                <h3>
+                    اللولب الشجري (مالتي لود)
+                </h3>
+
+                <button onclick="openModal('iud2')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+
+
+            <!-- اللولب الهرموني -->
+
+            <div class="card">
+
+                <img src="اللولب الهرموني.jpeg"
+                     alt="اللولب الهرموني">
+
+                <h3>
+                    اللولب الهرموني
+                </h3>
+
+                <button onclick="openModal('iud3')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+
+
+            <!-- حبوب مركبة -->
+
+            <div class="card">
+
+                <img src="حبوب (2).jpeg"
+                     alt="حبوب مركبة">
+
+                <h3>
+                    حبوب مركبة
+                </h3>
+
+                <button onclick="openModal('حبوب')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+
+
+            <!-- حبوب أحادية الهرمون -->
+
+            <div class="card">
+
+                <img src="حبوب احاديه الهرمون.jpeg"
+                     alt="حبوب أحادية الهرمون">
+
+                <h3>
+                    حبوب أحادية الهرمون
+                </h3>
+
+                <button onclick="openModal('حبوب2')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+
+
+            <!-- الحبوب الطارئة -->
+
+            <div class="card">
+
+                <img src="ط2.jpeg"
+                     alt="حبوب الطوارئ">
+
+                <h3>
+                    حبوب الطوارئ
+                </h3>
+
+                <button onclick="openModal('حبوب3')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+
+
+            <!-- الحقن الشهرية -->
+
+            <div class="card">
+
+                <img src="مركبه حقن.jpeg"
+                     alt="الحقن الشهرية">
+
+                <h3>
+                    الحقن الشهرية
+                </h3>
+
+                <button onclick="openModal('شهريه')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+
+
+            <!-- الحقن أحادية الهرمون -->
+
+            <div class="card">
+
+                <img src="حقن احاديه.jpeg"
+                     alt="حقن أحادية الهرمون">
+
+                <h3>
+                    حقن أحادية الهرمون
+                </h3>
+
+                <button onclick="openModal('حقن')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+
+
+            <!-- الواقي الذكري -->
+
+            <div class="card">
+
+                <img src="الواقي.jpeg"
+                     alt="الواقي الذكري">
+
+                <h3>
+                    الواقي الذكري
+                </h3>
+
+                <button onclick="openModal('condom')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+
+
+            <!-- الكبسولة -->
+
+            <div class="card">
+
+                <img src="كبسوله.jpeg"
+                     alt="الكبسولة">
+
+                <h3>
+                    الكبسولة
+                </h3>
+
+                <button onclick="openModal('capsule')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+
+
+            <!-- اللبوس -->
+
+            <div class="card">
+
+                <img src="ل3.jpeg"
+                     alt="اللبوس المهبلي">
+
+                <h3>
+                    اللبوس المهبلي
+                </h3>
+
+                <button onclick="openModal('suppository')">
+                    اعرف المزيد
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <p id="no-results">
+            لم يتم العثور على وسيلة بهذا الاسم.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         Modal
+    ========================= -->
+
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <span class="close" id="close-btn">
+                &times;
+            </span>
+
+            <img id="modal-img"
+                 src=""
+                 alt="صورة الوسيلة">
+
+            <h2 id="modal-title"></h2>
+
+            <p id="modal-text"></p>
+
+            <ul id="modal-list"></ul>
+
+
+            <a
+                href="https://wa.me/201098999498?text=مرحبًا%،%20أرغب%20في%20حجز%20استشارة%20بخصوص%20تنظيم%20الأسرة."
+                target="_blank"
+                rel="noopener"
+                class="btn whatsapp-btn"
+            >
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                لمزيد من المعلومات اتصل بنا
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         Footer
+    ========================= -->
+
+    <footer>
+
+        <h3>
+            إدارة تنظيم الأسرة بدمياط
+        </h3>
+
+        <p>
+            نعمل على نشر الوعي الصحي وتقديم خدمات
+            تنظيم الأسرة بجودة عالية.
+        </p>
+
+
+        <div>
+
+            <a href="#"
+               aria-label="فيسبوك">
+
+                <i class="fa-brands fa-facebook"></i>
+
+            </a>
+
+
+            <a href="#"
+               aria-label="واتساب">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+
+            <a href="#"
+               aria-label="الهاتف">
+
+                <i class="fa-solid fa-phone"></i>
+
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 جميع الحقوق محفوظة.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JavaScript
+    ========================= -->
+
+    <script>
+
+        /* =========================
+           بيانات الوسائل
+        ========================= */
+
+        const methods = {
+
+            iud: {
+                title: "اللولب النحاسي",
+                image: "معومات للولب نحاسي.jpeg",
+                text: "وسيلة طويلة المدى يتم تركيبها داخل الرحم بواسطة مقدم خدمة مدرب.",
+                list: [
+                    "يمكن أن يستمر لعدة سنوات حسب نوع اللولب.",
+                    "يتميز بفعالية عالية.",
+                    "يمكن إزالته في أي وقت.",
+                    "قد يسبب زيادة في دم الدورة الشهرية أو التقلصات لدى بعض السيدات.",
+                    "لا يوفر الحماية من الأمراض المنقولة جنسيًا."
+                ]
+            },
+
+
+            iud2: {
+                title: "اللولب الشجري (مالتي لود)",
+                image: "للولب الشجري.jpeg",
+                text: "نوع من اللولب النحاسي طويل المدى يتم تركيبه داخل الرحم بواسطة مقدم خدمة مدرب.",
+                list: [
+                    "يمكن أن يستمر لمدة تصل إلى 5 سنوات حسب النوع.",
+                    "فعال جدًا في منع الحمل.",
+                    "يمكن إزالته عند الرغبة.",
+                    "قد تحدث تغيرات في الدورة الشهرية لدى بعض السيدات.",
+                    "لا يوفر الحماية من الأمراض المنقولة جنسيًا."
+                ]
+            },
+
+
+            iud3: {
+                title: "اللولب الهرموني",
+                image: "هرموني للولب.jpeg",
+                text: "جهاز صغير يتم تركيبه داخل الرحم ويطلق هرمونًا للمساعدة على منع الحمل.",
+                list: [
+                    "فعال للغاية في منع الحمل.",
+                    "يمكن أن يستمر لعدة سنوات حسب النوع.",
+                    "يمكن إزالته عند الرغبة.",
+                    "قد يسبب تغيرات في طبيعة الدورة الشهرية.",
+                    "لا يوفر الحماية من الأمراض المنقولة جنسيًا."
+                ]
+            },
+
+
+            حبوب: {
+                title: "حبوب تنظيم الأسرة المركبة",
+                image: "حبوب مركبه.jpeg",
+                text: "حبوب تحتوي على هرمونين وتستخدم لمنع الحمل عند استخدامها بالطريقة الصحيحة.",
+                list: [
+                    "يؤخذ قرص واحد يوميًا حسب التعليمات.",
+                    "فعالة للغاية عند استخدامها بطريقة صحيحة.",
+                    "قد تساعد في تقليل دم الدورة والتقلصات.",
+                    "لا توفر الحماية من الأمراض المنقولة جنسيًا."
+                ]
+            },
+
+
+            حبوب2: {
+                title: "حبوب أحادية الهرمون",
+                image: "هرمون2.jpeg",
+                text: "حبوب تحتوي على هرمون واحد وتستخدم لمنع الحمل.",
+                list: [
+                    "يؤخذ قرص واحد يوميًا في نفس الموعد حسب التعليمات.",
+                    "يمكن أن تكون مناسبة للمرضعات.",
+                    "قد تسبب تغيرات في طبيعة الدورة الشهرية.",
+                    "لا توفر الحماية من الأمراض المنقولة جنسيًا."
+                ]
+            },
+
+
+            حبوب3: {
+                title: "حبوب الطوارئ",
+                image: "1ط.jpeg",
+                text: "وسيلة مؤقتة يمكن استخدامها بعد العلاقة غير المحمية في الحالات التي تستدعي منع الحمل الطارئ.",
+                list: [
+                    "وسيلة مؤقتة وليست وسيلة منتظمة لتنظيم الأسرة.",
+                    "تستخدم في حالات الطوارئ وفقًا للتعليمات.",
+                    "كلما تم استخدامها في الوقت المناسب كانت أكثر فاعلية.",
+                    "لا توفر الحماية من الأمراض المنقولة جنسيًا."
+                ]
+            },
+
+
+            شهريه: {
+                title: "الحقن الشهرية",
+                image: "ح1.jpeg",
+                text: "حقن هرمونية تستخدم على فترات شهرية للمساعدة على منع الحمل.",
+                list: [
+                    "تؤخذ الحقنة مرة كل 28 يومًا حسب التعليمات.",
+                    "فعالة عند الالتزام بمواعيد الحقن.",
+                    "قد تحدث بعض التغيرات في الدورة الشهرية.",
+                    "يمكن إيقاف استخدامها عند الرغبة.",
+                    "لا توفر الحماية من الأمراض المنقولة جنسيًا."
+                ]
+            },
+
+
+            حقن: {
+                title: "حقن أحادية الهرمون",
+                image: "ح2.jpeg",
+                text: "حقن تحتوي على هرمون واحد وتستخدم للمساعدة على منع الحمل.",
+                list: [
+                    "تؤخذ عادة كل ثلاثة أشهر حسب نوع الحقن.",
+                    "فعالة جدًا عند الالتزام بالمواعيد.",
+                    "قد تحدث تغيرات في الدورة الشهرية.",
+                    "قد يتأخر عودة الخصوبة لفترة بعد التوقف.",
+                    "لا توفر الحماية من الأمراض المنقولة جنسيًا."
+                ]
+            },
+
+
+            condom: {
+                title: "الواقي الذكري",
+                image: "الواقي.jpeg",
+                text: "وسيلة تستخدم أثناء العلاقة للمساعدة على منع الحمل.",
+                list: [
+                    "يساعد على الحماية من الحمل.",
+                    "يساعد على تقليل خطر انتقال العديد من الأمراض المنقولة جنسيًا عند استخدامه بطريقة صحيحة.",
+                    "يستخدم في كل مرة تحدث فيها علاقة.",
+                    "يمكن استخدامه مع وسيلة أخرى لتنظيم الأسرة.",
+                    "يسهل الحصول عليه واستخدامه."
+                ]
+            },
+
+
+            capsule: {
+                title: "الكبسولة",
+                image: "ك3.jpeg",
+                text: "وسيلة هرمونية طويلة المدى توضع تحت جلد الجزء الداخلي من الذراع بواسطة مقدم خدمة مدرب.",
+                list: [
+                    "تتميز بفاعلية عالية.",
+                    "يمكن أن تستمر لعدة سنوات حسب النوع.",
+                    "يمكن إزالتها عند الرغبة.",
+                    "قد تحدث تغييرات في الدورة الشهرية.",
+                    "لا توفر الحماية من الأمراض المنقولة جنسيًا."
+                ]
+            },
+
+
+            suppository: {
+                title: "اللبوس المهبلي",
+                image: "ك1.jpeg",
+                text: "وسيلة موضعية تستخدم قبل العلاقة وفقًا للتعليمات.",
+                list: [
+                    "يوضع داخل المهبل قبل العلاقة وفقًا للتعليمات.",
+                    "يعمل كمبيد للحيوانات المنوية.",
+                    "يستخدم قبل كل علاقة حسب التعليمات.",
+                    "لا يحتاج إلى استخدام يومي.",
+                    "لا يوفر الحماية من الأمراض المنقولة جنسيًا."
+                ]
+            }
+
+        };
+
+
+        /* =========================
+           فتح الـ Modal
+        ========================= */
+
+        function openModal(type) {
+
+            const data = methods[type];
+
+            if (!data) return;
+
+            document.getElementById("modal-img").src = data.image;
+
+            document.getElementById("modal-title").innerText =
+                data.title;
+
+            document.getElementById("modal-text").innerText =
+                data.text;
+
+
+            const listContainer =
+                document.getElementById("modal-list");
+
+            listContainer.innerHTML = "";
+
+
+            data.list.forEach(item => {
+
+                const li =
+                    document.createElement("li");
+
+                li.innerText = item;
+
+                listContainer.appendChild(li);
+
+            });
+
+
+            document.getElementById("modal").style.display = "flex";
+
+            document.body.style.overflow = "hidden";
+        }
+
+
+
+        /* =========================
+           إغلاق Modal
+        ========================= */
+
+        function closeModal() {
+
+            document.getElementById("modal").style.display =
+                "none";
+
+            document.body.style.overflow = "";
+        }
+
+
+        document
+            .getElementById("close-btn")
+            .addEventListener("click", closeModal);
+
+
+        window.addEventListener("click", function (e) {
+
+            const modal =
+                document.getElementById("modal");
+
+            if (e.target === modal) {
+                closeModal();
+            }
+
+        });
+
+
+        document.addEventListener("keydown", function (e) {
+
+            if (e.key === "Escape") {
+                closeModal();
+            }
+
+        });
+
+
+
+        /* =========================
+           القائمة في الموبايل
+        ========================= */
+
+        const menuBtn =
+            document.getElementById("menu-btn");
+
+        const navLinks =
+            document.getElementById("nav-links");
+
+
+        menuBtn.addEventListener("click", function () {
+
+            navLinks.classList.toggle("show");
+
+        });
+
+
+
+        /* =========================
+           البحث
+        ========================= */
+
+        document
+            .getElementById("search")
+            .addEventListener("input", function () {
+
+                const filter =
+                    this.value.trim().toLowerCase();
+
+                const cards =
+                    document.querySelectorAll(".card");
+
+                let visibleCards = 0;
+
+
+                cards.forEach(card => {
+
+                    const title =
+                        card.querySelector("h3")
+                            .innerText
+                            .toLowerCase();
+
+
+                    if (title.includes(filter)) {
+
+                        card.style.display = "flex";
+
+                        visibleCards++;
+
+                    } else {
+
+                        card.style.display = "none";
+
+                    }
+
+                });
+
+
+                document.getElementById("no-results").style.display =
+                    visibleCards === 0 ? "block" : "none";
+
+            });
+
+
+
+        /* =========================
+           Dark Mode
+        ========================= */
+
+        const themeToggleBtn =
+            document.getElementById("theme-toggle");
+
+        const themeIcon =
+            themeToggleBtn.querySelector("i");
+
+
+        const savedTheme =
+            localStorage.getItem("theme");
+
+
+        if (savedTheme === "dark") {
+
+            document.body.classList.add("dark-theme");
+
+            document.documentElement.classList.add("dark-theme");
+
+            themeIcon.classList.replace(
+                "fa-moon",
+                "fa-sun"
+            );
+
+        }
+
+
+        themeToggleBtn.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark-theme");
+
+            document.documentElement.classList.toggle(
+                "dark-theme"
+            );
+
+
+            const isDark =
+                document.body.classList.contains("dark-theme");
+
+
+            if (isDark) {
+
+                themeIcon.classList.replace(
+                    "fa-moon",
+                    "fa-sun"
+                );
+
+                localStorage.setItem(
+                    "theme",
+                    "dark"
+                );
+
+            } else {
+
+                themeIcon.classList.replace(
+                    "fa-sun",
+                    "fa-moon"
+                );
+
+                localStorage.setItem(
+                    "theme",
+                    "light"
+                );
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+
+

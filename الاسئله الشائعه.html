@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الشائعات والمعلومات الصحيحة | إدارة تنظيم الأسرة بدمياط</title>
+
+    <!-- Cairo Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+/* =========================================
+   GENERAL
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Cairo",sans-serif;
+    background:#f6fbff;
+    color:#263746;
+    line-height:1.8;
+    transition:.3s;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root{
+
+    --blue:#1479c9;
+    --blue-dark:#075b9e;
+    --blue-light:#eaf6ff;
+
+    --pink:#e89ab8;
+    --pink-light:#fff1f6;
+
+    --green:#15966b;
+    --green-light:#eafaf5;
+
+    --white:#ffffff;
+
+    --text:#263746;
+    --muted:#687b8b;
+
+    --border:#e1edf5;
+
+    --shadow:0 10px 35px rgba(30,100,150,.10);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:12px 6%;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.06);
+
+    transition:.3s;
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+
+.logo h2{
+
+    color:var(--blue-dark);
+
+    font-size:20px;
+
+    font-weight:800;
+}
+
+.logo p{
+
+    color:#777;
+
+    font-size:11px;
+}
+
+
+/* =========================================
+   NAV
+========================================= */
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+nav a{
+
+    position:relative;
+
+    text-decoration:none;
+
+    color:#444;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    padding:8px 5px;
+
+    transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+
+    color:var(--blue);
+}
+
+nav a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-3px;
+
+    right:0;
+
+    left:0;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:var(--blue);
+}
+
+
+/* =========================================
+   DARK MODE BUTTON
+========================================= */
+
+.theme-btn{
+
+    width:42px;
+    height:42px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:var(--blue-light);
+
+    color:var(--blue);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.theme-btn:hover{
+
+    transform:rotate(15deg) scale(1.08);
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.menu-btn{
+
+    display:none;
+
+    width:42px;
+    height:42px;
+
+    border:0;
+
+    border-radius:12px;
+
+    background:var(--blue-light);
+
+    color:var(--blue);
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    padding:65px 20px 75px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf7ff,
+            #f8fcff
+        );
+
+    border-bottom:1px solid #e0edf5;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(20,121,201,.06);
+
+    left:-100px;
+    top:-100px;
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(232,154,184,.07);
+
+    right:-80px;
+    bottom:-110px;
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+
+    margin:auto;
+}
+
+.small-title{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--blue);
+
+    background:white;
+
+    border:1px solid #d9edf9;
+
+    padding:7px 17px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.04);
+}
+
+.hero h1{
+
+    margin-top:18px;
+
+    color:#145b91;
+
+    font-size:43px;
+
+    font-weight:800;
+}
+
+.hero p{
+
+    max-width:720px;
+
+    margin:14px auto 0;
+
+    color:var(--muted);
+
+    font-size:15px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-section{
+
+    width:90%;
+
+    max-width:800px;
+
+    margin:-30px auto 0;
+
+    position:relative;
+
+    z-index:10;
+}
+
+.search-box{
+
+    position:relative;
+
+    background:white;
+
+    border-radius:18px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+}
+
+.search-box i{
+
+    position:absolute;
+
+    right:22px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:var(--blue);
+
+    font-size:18px;
+}
+
+.search-box input{
+
+    width:100%;
+
+    height:65px;
+
+    border:0;
+
+    outline:0;
+
+    background:transparent;
+
+    padding:0 58px 0 20px;
+
+    color:var(--text);
+
+    font-size:16px;
+}
+
+.search-box input::placeholder{
+
+    color:#9aaab5;
+}
+
+
+/* =========================================
+   FAQ CONTAINER
+========================================= */
+
+.faq-container{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:70px auto;
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+.section-heading span{
+
+    color:var(--pink);
+
+    font-size:14px;
+
+    font-weight:700;
+}
+
+.section-heading h2{
+
+    color:#174f78;
+
+    font-size:30px;
+
+    margin-top:4px;
+}
+
+
+/* =========================================
+   FAQ LIST
+========================================= */
+
+.faq-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+}
+
+.faq-item{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:17px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 18px rgba(20,90,130,.05);
+
+    transition:.3s;
+
+    animation:fadeUp .5s ease both;
+}
+
+.faq-item:hover{
+
+    box-shadow:0 9px 25px rgba(20,90,130,.10);
+}
+
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.faq-question{
+
+    width:100%;
+
+    min-height:72px;
+
+    padding:16px 20px;
+
+    border:0;
+
+    background:white;
+
+    color:#27495f;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    text-align:right;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.question-text{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.question-icon{
+
+    width:38px;
+    height:38px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--blue-light);
+
+    color:var(--blue);
+}
+
+.arrow{
+
+    width:34px;
+    height:34px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#f1f7fb;
+
+    color:#6f899a;
+
+    transition:.35s;
+}
+
+
+/* =========================================
+   ANSWER
+========================================= */
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    background:#fbfdff;
+
+    transition:max-height .45s ease;
+}
+
+.answer-content{
+
+    padding:20px 25px 25px;
+
+    border-top:1px solid #edf3f7;
+}
+
+.answer-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--green);
+
+    font-weight:800;
+
+    margin-bottom:8px;
+}
+
+.answer-title i{
+
+    width:28px;
+    height:28px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--green-light);
+
+    font-size:12px;
+}
+
+.answer-content p{
+
+    color:#596f7f;
+
+    font-size:15px;
+
+    line-height:2.1;
+}
+
+
+/* =========================================
+   OPEN FAQ
+========================================= */
+
+.faq-item.open{
+
+    border-color:#b9ddf3;
+}
+
+.faq-item.open .faq-question{
+
+    color:var(--blue);
+
+    background:#fbfeff;
+}
+
+.faq-item.open .arrow{
+
+    transform:rotate(180deg);
+
+    background:var(--blue);
+
+    color:white;
+}
+
+
+/* =========================================
+   NO RESULTS
+========================================= */
+
+.no-results{
+
+    display:none;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+    margin-top:20px;
+
+    background:white;
+
+    border-radius:18px;
+
+    border:1px solid var(--border);
+}
+
+.no-results i{
+
+    font-size:40px;
+
+    color:#9eb3c2;
+
+    margin-bottom:10px;
+}
+
+.no-results h3{
+
+    color:#456477;
+
+    margin-bottom:5px;
+}
+
+.no-results p{
+
+    color:#82939f;
+}
+
+
+/* =========================================
+   CONSULTATION
+========================================= */
+
+.consultation{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:0 auto 75px;
+
+    padding:35px 40px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf7ff,
+            #f8fcff
+        );
+
+    border:1px solid #d8edf9;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+.consultation span{
+
+    color:var(--blue);
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+.consultation h2{
+
+    color:#17547f;
+
+    margin:3px 0;
+}
+
+.consultation p{
+
+    color:#6d8190;
+
+    font-size:14px;
+}
+
+.consultation-btn{
+
+    flex-shrink:0;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:13px 24px;
+
+    border-radius:30px;
+
+    background:var(--blue);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.consultation-btn:hover{
+
+    background:var(--blue-dark);
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+
+    background:#103f61;
+
+    color:white;
+
+    padding:45px 20px 20px;
+}
+
+.footer-inner{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.footer h3{
+
+    font-size:22px;
+
+    margin-bottom:8px;
+}
+
+.footer p{
+
+    color:#c9dce9;
+
+    font-size:13px;
+}
+
+.footer-links{
+
+    margin:22px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+}
+
+.footer-links a{
+
+    color:#e3f2fc;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+
+    color:white;
+}
+
+.copyright{
+
+    padding-top:18px;
+
+    border-top:1px solid rgba(255,255,255,.12);
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-theme{
+
+    background:#0f172a;
+
+    color:#f8fafc;
+}
+
+body.dark-theme header{
+
+    background:#1e293b;
+}
+
+body.dark-theme nav a{
+
+    color:#cbd5e1;
+}
+
+body.dark-theme nav a.active,
+body.dark-theme nav a:hover{
+
+    color:#60a5fa;
+}
+
+body.dark-theme .theme-btn{
+
+    background:#334155;
+
+    color:#facc15;
+}
+
+body.dark-theme .hero{
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #1e293b
+        );
+
+    border-color:#334155;
+}
+
+body.dark-theme .hero h1{
+
+    color:#93c5fd;
+}
+
+body.dark-theme .hero p{
+
+    color:#cbd5e1;
+}
+
+body.dark-theme .small-title{
+
+    background:#1e293b;
+
+    border-color:#334155;
+}
+
+body.dark-theme .search-box,
+body.dark-theme .faq-item,
+body.dark-theme .faq-question,
+body.dark-theme .no-results{
+
+    background:#1e293b;
+
+    border-color:#334155;
+
+    color:#f8fafc;
+}
+
+body.dark-theme .faq-question{
+
+    color:#e2e8f0;
+}
+
+body.dark-theme .faq-item.open .faq-question{
+
+    background:#243447;
+
+    color:#60a5fa;
+}
+
+body.dark-theme .faq-answer{
+
+    background:#172235;
+}
+
+body.dark-theme .answer-content{
+
+    border-color:#334155;
+}
+
+body.dark-theme .answer-content p{
+
+    color:#cbd5e1;
+}
+
+body.dark-theme .section-heading h2{
+
+    color:#93c5fd;
+}
+
+body.dark-theme .consultation{
+
+    background:#172b3d;
+
+    border-color:#334155;
+}
+
+body.dark-theme .consultation h2{
+
+    color:#93c5fd;
+}
+
+body.dark-theme .consultation p{
+
+    color:#cbd5e1;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:900px){
+
+    header{
+
+        padding:10px 4%;
+    }
+
+    nav{
+
+        display:none;
+
+        position:absolute;
+
+        top:75px;
+
+        right:4%;
+        left:4%;
+
+        background:white;
+
+        padding:12px;
+
+        border-radius:15px;
+
+        box-shadow:var(--shadow);
+
+        border:1px solid var(--border);
+
+        flex-direction:column;
+
+        gap:5px;
+    }
+
+    nav.show{
+
+        display:flex;
+    }
+
+    nav a{
+
+        text-align:center;
+
+        padding:11px;
+    }
+
+    nav a.active::after{
+
+        display:none;
+    }
+
+    .menu-btn{
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+    }
+
+    .hero{
+
+        padding:55px 20px 70px;
+    }
+
+    .hero h1{
+
+        font-size:34px;
+    }
+
+    .consultation{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:30px 22px;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .logo img{
+
+        width:48px;
+        height:48px;
+    }
+
+    .logo h2{
+
+        font-size:15px;
+    }
+
+    .logo p{
+
+        display:none;
+    }
+
+    .theme-btn,
+    .menu-btn{
+
+        width:39px;
+        height:39px;
+    }
+
+    .hero h1{
+
+        font-size:28px;
+    }
+
+    .hero p{
+
+        font-size:13px;
+    }
+
+    .search-box input{
+
+        height:58px;
+
+        font-size:14px;
+    }
+
+    .faq-container{
+
+        margin-top:55px;
+    }
+
+    .section-heading h2{
+
+        font-size:25px;
+    }
+
+    .faq-question{
+
+        font-size:14px;
+
+        padding:14px;
+    }
+
+    .question-icon{
+
+        width:32px;
+        height:32px;
+    }
+
+    .arrow{
+
+        width:30px;
+        height:30px;
+    }
+
+    .answer-content{
+
+        padding:18px 17px 20px;
+    }
+
+    .answer-content p{
+
+        font-size:13px;
+    }
+
+    .consultation-btn{
+
+        width:100%;
+
+        justify-content:center;
+    }
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+    <div class="logo">
+
+        <img src="Flag_of_Damietta_Governorate.svg.webp"
+             alt="شعار دمياط">
+
+        <div>
+
+            <h2>إدارة تنظيم الأسرة بدمياط</h2>
+
+            <p>Damietta Family Planning Administration</p>
+
+        </div>
+
+    </div>
+
+
+    <nav id="nav-links">
+
+        <a href="index.html">
+            الرئيسية
+        </a>
+
+        <a href="وسائل .html">
+            وسائل تنظيم الأسرة
+        </a>
+
+    
+
+        <a class="active" href="الاسئله الشائعه.html">
+            الأسئلة الشائعة
+        </a>
+
+        <a href="تواصل معنا.html">
+            تواصل معنا
+        </a>
+
+    </nav>
+
+
+    <div style="display:flex;align-items:center;gap:8px;">
+
+        <button id="theme-toggle"
+                class="theme-btn"
+                aria-label="تبديل الوضع">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+
+        <button id="menu-btn"
+                class="menu-btn"
+                aria-label="فتح القائمة">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="small-title">
+
+            <i class="fa-regular fa-circle-question"></i>
+
+            معلومات صحية موثوقة
+
+        </span>
+
+
+        <h1>
+            شائعات عن وسائل تنظيم الأسرة
+        </h1>
+
+
+        <p>
+
+            قد تسمعين بعض المعلومات أو المعتقدات غير الدقيقة
+            عن وسائل تنظيم الأسرة. هنا يمكنكِ التعرف على
+            المعلومات الصحيحة بطريقة مبسطة وواضحة.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SEARCH
+========================================= -->
+
+<section class="search-section">
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            id="faqSearch"
+            placeholder="ابحثي عن الشائعة أو السؤال..."
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FAQ
+========================================= -->
+
+<main class="faq-container">
+
+    <div class="section-heading">
+
+        <span>
+            الشائعة والرد الصحيح
+        </span>
+
+        <h2>
+            أكثر الأسئلة شيوعًا
+        </h2>
+
+    </div>
+
+
+    <div id="faqList" class="faq-list"></div>
+
+
+    <div id="noResults" class="no-results">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <h3>
+            لم نجد نتيجة
+        </h3>
+
+        <p>
+            جربي البحث بكلمات مختلفة.
+        </p>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================
+     CONSULTATION
+========================================= -->
+
+<section class="consultation">
+
+    <div>
+
+        <span>
+            هل لديكِ سؤال آخر؟
+        </span>
+
+        <h2>
+            تحدثي مع مقدم الخدمة
+        </h2>
+
+        <p>
+            للحصول على مشورة تناسب حالتك الصحية،
+            تواصلي مع مقدم الرعاية الصحية المختص.
+        </p>
+
+    </div>
+
+
+    <a
+        href="https://wa.me/20 10 98999498"
+        target="_blank"
+        rel="noopener"
+        class="consultation-btn">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        احجز استشارة مجانيه
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <h3>
+            إدارة تنظيم الأسرة بدمياط
+        </h3>
+
+        <p>
+            التوعية الصحية لخدمة أسرة أكثر صحة واستقرارًا.
+        </p>
+
+
+        <div class="footer-links">
+
+    <a href="index.html">الرئيسية</a>
+            <a class="active" href="وسائل .html">وسائل تنظيم الأسرة</a>
+         
+            <a href="الاسئله الشائعه.html">الأسئلة الشائعة</a>
+            <a href="تواصل معنا.html">تواصل معنا</a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 جميع الحقوق محفوظة
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================
+   FAQ DATA
+========================================= */
+
+const faqData = [
+
+    {
+        question:"وسائل تنظيم الأسرة تمنع الحمل بشكل دائم.",
+
+        answer:"معظم وسائل تنظيم الأسرة مؤقتة وقابلة للعكس، وتعود الخصوبة بعد التوقف عن استخدامها أو إزالة الوسيلة بحسب نوعها. أما الوسائل الجراحية مثل التعقيم فهي وسائل دائمة."
+    },
+
+
+    {
+        question:"إذا حدث حمل بسبب فشل الوسيلة، سيولد الطفل مشوهًا.",
+
+        answer:"لا يعني حدوث الحمل أثناء استخدام وسيلة لتنظيم الأسرة أن الطفل سيولد بتشوهات. وفي حالة حدوث حمل أثناء استخدام وسيلة معينة، يجب مراجعة مقدم الرعاية الصحية لتقييم الحالة وتقديم المشورة المناسبة."
+    },
+
+
+    {
+        question:"تسبب وسائل تنظيم الأسرة زيادة في الوزن أو تشوهًا في الشكل.",
+
+        answer:"تختلف الآثار الجانبية حسب نوع الوسيلة ومن سيدة لأخرى. قد يصاحب بعض الوسائل الهرمونية تغير في الوزن لدى بعض المستخدمات، لكن ذلك لا يعني أنها تسبب تشوهًا في شكل الجسم. ويمكن مناقشة أي آثار جانبية مع مقدم الرعاية الصحية."
+    },
+
+
+    {
+        question:"بعض وسائل تنظيم الأسرة قد تسبب العقم.",
+
+        answer:"وسائل منع الحمل الحديثة لا تسبب العقم. وتختلف سرعة عودة الخصوبة حسب الوسيلة المستخدمة. يمكن أن تعود الخصوبة سريعًا بعد إيقاف بعض الوسائل، كما تعود بعد إزالة الوسائل القابلة للعكس مثل اللولب."
+    },
+
+
+    {
+        question:"السيدات الأكبر سنًا لا يمكنهن استخدام الوسائل الهرمونية أو اللولب النحاسي.",
+
+        answer:"العمر وحده لا يعني أن السيدة لا تستطيع استخدام وسيلة معينة. يعتمد اختيار الوسيلة على الحالة الصحية وعوامل الخطورة والأدوية المستخدمة، لذلك يُفضّل الحصول على تقييم ومشورة من مقدم الرعاية الصحية."
+    },
+
+
+    {
+        question:"السيدات صغيرات السن لا يمكنهن استخدام وسائل تنظيم الأسرة.",
+
+        answer:"العمر وحده ليس سببًا لمنع استخدام جميع وسائل تنظيم الأسرة. يمكن اختيار الوسيلة المناسبة بناءً على الحالة الصحية والاحتياجات الفردية، مع الحصول على المشورة الصحية المناسبة."
+    },
+
+
+    {
+        question:"لا يمكن حدوث حمل أو انتقال عدوى منقولة جنسيًا دون حدوث إيلاج.",
+
+        answer:"يمكن لبعض العدوى المنقولة جنسيًا أن تنتقل من خلال أنواع مختلفة من الاتصال الجنسي أو ملامسة المناطق المصابة، وليس الإيلاج وحده هو العامل المحدد. ويساعد الواقي الذكري على تقليل خطر انتقال العديد من العدوى المنقولة جنسيًا."
+    },
+
+
+    {
+        question:"وسائل تنظيم الأسرة ضارة بالصحة؟",
+
+        answer:"وسائل تنظيم الأسرة الحديثة آمنة وفعالة بالنسبة لمعظم الأشخاص عند اختيارها واستخدامها بطريقة مناسبة. وقد تحدث بعض الآثار الجانبية مع بعض الوسائل، ويمكن مناقشة هذه الآثار مع مقدم الرعاية الصحية."
+    },
+
+
+    {
+        question:"الوسائل الهرمونية تسبب السرطان؟",
+
+        answer:"العلاقة بين وسائل منع الحمل الهرمونية وبعض أنواع السرطان تختلف حسب نوع الوسيلة ونوع السرطان وعوامل أخرى. لذلك لا يصح تعميم أن جميع الوسائل الهرمونية تسبب السرطان. اختيار الوسيلة يجب أن يتم وفق الحالة الصحية وبعد استشارة مقدم الرعاية الصحية."
+    },
+
+
+    {
+        question:"الوسائل التي تستخدم لسنوات طويلة تحتاج إلى فترات راحة؟",
+
+        answer:"بعض وسائل تنظيم الأسرة طويلة المدى يمكن استخدامها لسنوات حسب نوع الوسيلة وتوصيات مقدم الرعاية الصحية، ولا توجد قاعدة عامة تستلزم أخذ فترات راحة لمجرد مرور فترة زمنية."
+    }
+
+];
+
+
+/* =========================================
+   ELEMENTS
+========================================= */
+
+const faqList = document.getElementById("faqList");
+
+const searchInput = document.getElementById("faqSearch");
+
+const noResults = document.getElementById("noResults");
+
+
+/* =========================================
+   DISPLAY FAQ
+========================================= */
+
+function displayFAQs(list){
+
+    faqList.innerHTML = "";
+
+
+    list.forEach((item,index)=>{
+
+        const faqItem = document.createElement("div");
+
+        faqItem.className = "faq-item";
+
+
+        faqItem.innerHTML = `
+
+            <button class="faq-question">
+
+                <span class="question-text">
+
+                    <span class="question-icon">
+
+                        <i class="fa-regular fa-circle-question"></i>
+
+                    </span>
+
+                    <span>
+                        ${item.question}
+                    </span>
+
+                </span>
+
+
+                <span class="arrow">
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </span>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                <div class="answer-content">
+
+                    <div class="answer-title">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        الرد الصحيح
+
+                    </div>
+
+                    <p>
+                        ${item.answer}
+                    </p>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        faqList.appendChild(faqItem);
+
+
+        const question =
+            faqItem.querySelector(".faq-question");
+
+        const answer =
+            faqItem.querySelector(".faq-answer");
+
+
+        question.addEventListener("click",()=>{
+
+            const isOpen =
+                faqItem.classList.contains("open");
+
+
+            document
+                .querySelectorAll(".faq-item")
+                .forEach(item=>{
+
+                    item.classList.remove("open");
+
+                    const otherAnswer =
+                        item.querySelector(".faq-answer");
+
+                    otherAnswer.style.maxHeight = null;
+
+                });
+
+
+            if(!isOpen){
+
+                faqItem.classList.add("open");
+
+                answer.style.maxHeight =
+                    answer.scrollHeight + "px";
+
+            }
+
+        });
+
+    });
+
+
+    if(list.length === 0){
+
+        noResults.style.display = "block";
+
+    }else{
+
+        noResults.style.display = "none";
+
+    }
+
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+searchInput.addEventListener("input",function(){
+
+    const searchValue =
+        this.value.trim().toLowerCase();
+
+
+    const filtered =
+        faqData.filter(item =>
+
+            item.question
+                .toLowerCase()
+                .includes(searchValue)
+
+            ||
+
+            item.answer
+                .toLowerCase()
+                .includes(searchValue)
+
+        );
+
+
+    displayFAQs(filtered);
+
+});
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+const themeToggle =
+    document.getElementById("theme-toggle");
+
+const themeIcon =
+    themeToggle.querySelector("i");
+
+
+const savedTheme =
+    localStorage.getItem("theme");
+
+
+if(savedTheme === "dark"){
+
+    document.body.classList.add("dark-theme");
+
+    themeIcon.classList.replace(
+        "fa-moon",
+        "fa-sun"
+    );
+}
+
+
+themeToggle.addEventListener("click",()=>{
+
+    document.body.classList.toggle("dark-theme");
+
+
+    const isDark =
+        document.body.classList.contains("dark-theme");
+
+
+    if(isDark){
+
+        themeIcon.classList.replace(
+            "fa-moon",
+            "fa-sun"
+        );
+
+        localStorage.setItem(
+            "theme",
+            "dark"
+        );
+
+    }else{
+
+        themeIcon.classList.replace(
+            "fa-sun",
+            "fa-moon"
+        );
+
+        localStorage.setItem(
+            "theme",
+            "light"
+        );
+
+    }
+
+});
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const menuBtn =
+    document.getElementById("menu-btn");
+
+const navLinks =
+    document.getElementById("nav-links");
+
+
+menuBtn.addEventListener("click",()=>{
+
+    navLinks.classList.toggle("show");
+
+});
+
+
+/* =========================================
+   START
+========================================= */
+
+displayFAQs(faqData);
+
+</script>
+
+</body>
+</html>
