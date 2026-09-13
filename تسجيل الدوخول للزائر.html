@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تسجيل الدخول | إدارة تنظيم الأسرة بدمياط</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f8fc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-box {
+            width: 90%;
+            max-width: 430px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-box h1 {
+            text-align: center;
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .login-box .description {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 17px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 7px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: #1976d2;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #1976d2;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .login-btn:hover {
+            background: #125ca5;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>تسجيل الدخول</h1>
+
+        <p class="description">
+            سجل الدخول للمتابعة والاستفادة من خدمات الموقع
+        </p>
+
+        <form id="loginForm">
+
+            <div class="input-group">
+                <label for="name">الاسم</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="اكتب اسمك"
+                    required
+                >
+            </div>
+
+
+            <div class="input-group">
+                <label for="email">البريد الإلكتروني</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@email.com"
+                    required
+                >
+            </div>
+
+
+            <div class="input-group">
+                <label for="password">كلمة المرور</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="اكتب كلمة المرور"
+                    required
+                >
+            </div>
+
+
+            <button
+                type="submit"
+                class="login-btn"
+            >
+                تسجيل الدخول
+            </button>
+
+        </form>
+
+
+        <div id="message"></div>
+
+    </div>
+
+
+    <script>
+
+        const loginForm =
+            document.getElementById("loginForm");
+
+        const message =
+            document.getElementById("message");
+
+
+        loginForm.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const password =
+                document.getElementById("password").value;
+
+
+            // حفظ بيانات المستخدم
+            const user = {
+                name: name,
+                email: email,
+                password: password
+            };
+
+
+            localStorage.setItem(
+                "visitorUser",
+                JSON.stringify(user)
+            );
+
+
+            // رسالة نجاح
+            message.textContent =
+                "تم تسجيل الدخول بنجاح ✅";
+
+            message.style.color = "green";
+
+
+            // الانتقال للصفحة الرئيسية
+            setTimeout(function () {
+
+                window.location.href = "index.html";
+
+            }, 700);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
